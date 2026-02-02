@@ -92,7 +92,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
         !friendUIDs.includes(senderID)
       ) {
         return api.sendMessage(
-          "teri ma 2 rs ki Rawndi hai tu msg mt kr Aj urf Abhi Ch0d Deg4 teri ma  ko byy🙂 ss Lekr story Lga by",
+          "teri ma 2 rs ki Rawndi hai tu msg mt kr Ritu Urf Riitesh Ch0d Deg4 teri ma  ko byy🙂 ss Lekr story Lga by",
           threadID,
           messageID
         );
@@ -181,7 +181,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
           index++;
         }, 60000);
 
-        api.sendMessage(`Aj Urf Abhi Ch0d diya garib ko  🤣rkb ${name}`, threadID);
+        api.sendMessage(`Ritesh urf Ritu Ch0d diya garib ko  🤣rkb ${name}`, threadID);
       }
 
       else if (cmd === "/stop") {
@@ -189,7 +189,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
         if (rkbInterval) {
           clearInterval(rkbInterval);
           rkbInterval = null;
-          api.sendMessage("Aj se ((hud gaye bche🤣", threadID);
+          api.sendMessage("Ritesh se ((hud gaye bche🤣", threadID);
         } else {
           api.sendMessage("konsa gaLi du sale ko🤣 rkb tha", threadID);
         }
