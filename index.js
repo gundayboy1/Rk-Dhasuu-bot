@@ -101,12 +101,12 @@ const input = args.slice(1).join(" ");
       else if (cmd === "-lockgroupname") {
         await api.setTitle(input, threadID);
         lockedGroupNames[threadID] = input;
-        api.sendMessage(`H4NU sir lock hogya name ab koi badalega to uski ma bhi chod dunga ap bolo to 😎Locked: ${input}`, threadID);
+        api.sendMessage(`Riitesh sir lock hogya name ab koi badalega to uski ma bhi chod dunga ap bolo to 😎Locked: ${input}`, threadID);
       }
 
       else if (cmd === "-unlockgroupname") {
         delete lockedGroupNames[threadID];
-        api.sendMessage("🔓ok Ravi sir kr diya unblock ma chudane do naam par rkb ko Unlocked group name.", threadID);
+        api.sendMessage("🔓ok Riitesh sir kr diya unblock ma chudane do naam par rkb ko Unlocked group name.", threadID);
       }
 
       else if (cmd === "-uid") {
@@ -114,7 +114,7 @@ const input = args.slice(1).join(" ");
       }
 
       else if (cmd === "-exit") {
-        api.sendMessage(`Ritesh  chalta hun sabki ma chod diya kabhi krishna jaise 25K gulam ko chodna ho to bula lena inki ma ki bur me sui dhaga dal kr see dunga 🙏🖕😎`, threadID, () => {
+        api.sendMessage(`Ritesh  chalta hun sabki ma chod diya kabhi Hannu jaise 25K gulam ko chodna ho to bula lena inki ma ki bur me sui dhaga dal kr see dunga 🙏🖕😎`, threadID, () => {
           api.removeUserFromGroup(api.getCurrentUserID(), threadID);
         });
       }
