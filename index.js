@@ -33,7 +33,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
         const lockedName = lockedGroupNames[threadID];
         if (lockedName && currentName !== lockedName) {
           await api.setTitle(lockedName, threadID);
-          api.sendMessage(`oi Randike yehan Ritesh bos ne name rakha gc ke ab tere baap ka bhi aukat nhi badal sake 🤨 samjha lode chal nikal`, threadID);
+          api.sendMessage(`oye Randike yehan Ritesh bos ne name rakha gc ka ab tere baap ka bhi aukat nhi badal sake 🤨 samjha lode chal nikal`, threadID);
         }
         return;
       }
