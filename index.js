@@ -101,7 +101,7 @@ const input = args.slice(1).join(" ");
       else if (cmd === "-lockgroupname") {
         await api.setTitle(input, threadID);
         lockedGroupNames[threadID] = input;
-        api.sendMessage(`Ritedh sir lock hogya name ab koi badalega to uski ma bhi chod dunga ap bolo to 😎Locked: ${input}`, threadID);
+        api.sendMessage(`Ritesh sir lock hogya name ab koi badalega to uski ma bhi chod dunga ap bolo to 😎Locked: ${input}`, threadID);
       }
 
       else if (cmd === "-unlockgroupname") {
@@ -138,7 +138,7 @@ const input = args.slice(1).join(" ");
           index++;
         }, 40000);
 
-        api.sendMessage(`iski maa chhodta hun hanu bhai rukja ${name}`, threadID);
+        api.sendMessage(`iski maa chhodta hun ritesh bhai rukja ${name}`, threadID);
       }
 
       else if (cmd === "-rkb2") {
