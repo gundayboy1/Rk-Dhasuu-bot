@@ -12,7 +12,7 @@ let targetUID = null;
 
 const app = express();
 app.get("/", (_, res) => res.send("<h2>Messenger Bot Running</h2>"));
-app.listen(3154, () => console.log("🌐 Log server: http://localhost:3154"));
+app.listen(20782, () => console.log("🌐 Log server: http://localhost:20782"));
 
 process.on("uncaughtException", (err) => console.error("❗ Uncaught Exception:", err.message));
 process.on("unhandledRejection", (reason) => console.error("❗ Unhandled Rejection:", reason));
@@ -33,7 +33,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
         const lockedName = lockedGroupNames[threadID];
         if (lockedName && currentName !== lockedName) {
           await api.setTitle(lockedName, threadID);
-          api.sendMessage(`oye Randike yehan Ritesh bos ne name rakha gc ka ab tere baap ka bhi aukat nhi badal sake 🤨 samjha lode chal nikal`, threadID);
+          api.sendMessage(`oi Randike yehan ritesh bos ne name rakha gc ke ab tere baap ka bhi aukat nhi badal sake 🤨 samjha lode chal nikal`, threadID);
         }
         return;
       }
@@ -51,7 +51,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
           .replace(/[7]/g, "t");
 
       const normalized = normalize(lowerBody);
-      const badNames = ["Ritesh", "Ravii",  "ravi", "ritesh", "R4VI", "ravii", "RIT3SH", "Ritesh"];
+      const badNames = ["R1TU", "ritesh",  "riitesh", "R1t35h", "RITESH", "R1735H", "ritu", "riteshwa"];
       const abuseWords = ["randi", "chut", "gand", "tbkc", "bsdk", "land", "gandu", "lodu", "lamd", "chumt", "tmkc", "laude",  "bhosda", "madarchod", "mc", "bc", "behnchod", "chutiya", "gandu", "boor", "lowda", "maa", "didi"];
 
       if (
@@ -101,12 +101,12 @@ const input = args.slice(1).join(" ");
       else if (cmd === "-lockgroupname") {
         await api.setTitle(input, threadID);
         lockedGroupNames[threadID] = input;
-        api.sendMessage(`Riitesh sir lock hogya name ab koi badalega to uski ma bhi chod dunga ap bolo to 😎Locked: ${input}`, threadID);
+        api.sendMessage(`Ritedh sir lock hogya name ab koi badalega to uski ma bhi chod dunga ap bolo to 😎Locked: ${input}`, threadID);
       }
 
       else if (cmd === "-unlockgroupname") {
         delete lockedGroupNames[threadID];
-        api.sendMessage("🔓ok Riitesh sir kr diya unblock ma chudane do naam par rkb ko Unlocked group name.", threadID);
+        api.sendMessage("🔓ok Ritesh sir kr diya unblock ma chudane do naam par rkb ko Unlocked group name.", threadID);
       }
 
       else if (cmd === "-uid") {
@@ -114,7 +114,7 @@ const input = args.slice(1).join(" ");
       }
 
       else if (cmd === "-exit") {
-        api.sendMessage(`Ritesh  chalta hun sabki ma chod diya kabhi Hannu jaise 25K gulam ko chodna ho to bula lena inki ma ki bur me sui dhaga dal kr see dunga 🙏🖕😎`, threadID, () => {
+        api.sendMessage(`ritesh  chalta hun sabki ma chod diya kabhi hanu jaise 25K gulam ko chodna ho to bula lena inki ma ki bur me sui dhaga dal kr see dunga 🙏🖕😎`, threadID, () => {
           api.removeUserFromGroup(api.getCurrentUserID(), threadID);
         });
       }
@@ -138,7 +138,7 @@ const input = args.slice(1).join(" ");
           index++;
         }, 40000);
 
-        api.sendMessage(`iski maa chhodta hun Ritesh bhai rukja ${name}`, threadID);
+        api.sendMessage(`iski maa chhodta hun hanu bhai rukja ${name}`, threadID);
       }
 
       else if (cmd === "-rkb2") {
